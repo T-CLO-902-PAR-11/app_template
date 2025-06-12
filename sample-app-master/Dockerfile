@@ -4,7 +4,7 @@ FROM php:8.2.8-apache
 # Installez les extensions PHP nécessaires
 RUN docker-php-ext-install pdo_mysql
 
-RUN apt-get update && apt-get install -y git unzip p7zip-full
+RUN apt-get update && apt-get install -y git unzip p7zip-full default-mysql-client
 
 # Installez Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
