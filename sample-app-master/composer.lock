@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "45d2eb51f99fc49f974d63fc707b7080",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1899,6 +1899,74 @@
             "time": "2023-02-25T19:38:58+00:00"
         },
         {
+            "name": "promphp/prometheus_client_php",
+            "version": "v2.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PromPHP/prometheus_client_php.git",
+                "reference": "a283aea8269287dc35313a0055480d950c59ac1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PromPHP/prometheus_client_php/zipball/a283aea8269287dc35313a0055480d950c59ac1f",
+                "reference": "a283aea8269287dc35313a0055480d950c59ac1f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4|^8.0"
+            },
+            "replace": {
+                "endclothing/prometheus_client_php": "*",
+                "jimdo/prometheus_client_php": "*",
+                "lkaemmerling/prometheus_client_php": "*"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.3|^7.0",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.5.4",
+                "phpstan/phpstan-phpunit": "^1.1.0",
+                "phpstan/phpstan-strict-rules": "^1.1.0",
+                "phpunit/phpunit": "^9.4",
+                "squizlabs/php_codesniffer": "^3.6",
+                "symfony/polyfill-apcu": "^1.6"
+            },
+            "suggest": {
+                "ext-apc": "Required if using APCu.",
+                "ext-pdo": "Required if using PDO.",
+                "ext-redis": "Required if using Redis.",
+                "promphp/prometheus_push_gateway_php": "An easy client for using Prometheus PushGateway.",
+                "symfony/polyfill-apcu": "Required if you use APCu on PHP8.0+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Prometheus\\": "src/Prometheus/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Kämmerling",
+                    "email": "kontakt@lukas-kaemmerling.de"
+                }
+            ],
+            "description": "Prometheus instrumentation library for PHP applications.",
+            "support": {
+                "issues": "https://github.com/PromPHP/prometheus_client_php/issues",
+                "source": "https://github.com/PromPHP/prometheus_client_php/tree/v2.14.1"
+            },
+            "time": "2025-04-14T07:59:43+00:00"
+        },
+        {
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
@@ -2601,6 +2669,78 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "renoki-co/laravel-exporter-contracts",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/renoki-co/laravel-exporter-contracts.git",
+                "reference": "d898550f4e095c3d341c1f52eb98cd0b7a452841"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/renoki-co/laravel-exporter-contracts/zipball/d898550f4e095c3d341c1f52eb98cd0b7a452841",
+                "reference": "d898550f4e095c3d341c1f52eb98cd0b7a452841",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "^8.83|^9.0.1",
+                "illuminate/routing": "^8.83|^9.0.1",
+                "illuminate/support": "^8.83|^9.0.1",
+                "php": "^8.0",
+                "promphp/prometheus_client_php": "^2.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^6.28|^7.0",
+                "orchestra/testbench-core": "^6.28|^7.0",
+                "phpunit/phpunit": "^9.5.21"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "RenokiCo\\LaravelExporter\\LaravelExporterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RenokiCo\\LaravelExporter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Renoki",
+                    "homepage": "https://github.com/rennokki",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Base contracts implementation for Prometheus exports in Laravel.",
+            "homepage": "https://github.com/renoki-co/laravel-exporter-contracts",
+            "keywords": [
+                "Metrics",
+                "exporter",
+                "laravel",
+                "php",
+                "prometheus"
+            ],
+            "support": {
+                "issues": "https://github.com/renoki-co/laravel-exporter-contracts/issues",
+                "source": "https://github.com/renoki-co/laravel-exporter-contracts/tree/2.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/rennokki",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-11-17T14:42:43+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7453,8 +7593,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0|^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
